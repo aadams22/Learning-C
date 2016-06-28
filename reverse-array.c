@@ -26,18 +26,27 @@ int main() {
 	}
 
 
-		for (int j = 0; j < 12/2; j++ ) {
-			//creats a counter that counts down from half way through array but ignores median
-			int other = 6 - j - 1;
-			// printf("this is other: "); 
-			// printf("%d\n", other);
+	for (int j = 0; j < 12/2; j++ ) 
+	{
+		int other = 12 - j - 1;
 
-			//temp holds 
-			int temp = n[j];
-			printf("this is temp:");	
-			printf("%d\n", temp);
-			// n[j] = n[other];
-			// n[other] = temp;
-		}
+		int temp = n[j];
+		printf("%d\n", n[j]);
+		n[j] = n[other];
+		// n[other] = temp;
+		
+	}
+
+
 
 	}
+
+
+//other:
+// 11, 10, 9, 8, 7, 6
+//temp:
+// 0, 1, 2, 3, 4, 5
+//n[j]:
+// 0, 1, 2, 3, 4, 5
+//n[other]
+// 0, 1, 2, 2, 1, 0
