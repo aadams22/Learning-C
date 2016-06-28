@@ -8,24 +8,21 @@ int i, j, k;
 
 int main() {
 
-	// writes array
-	for (int i = 0; i <= 16; ++i)
+
+	for (int i = 0; i <= 16; ++i) 	// writes array
 	{
 		a[i] = i;
-		// output each array element's value
-		printf("Element[%d] = %d\n", i, a[i] );
-
+		printf("Element[%d] = %d\n", i, a[i] ); // output each array element's value
 	}
 
-	// int k = sizeof(a);
-	// printf("%d\n", k);
+	int k = sizeof(a);
+	printf("%d\n", k);
 
-	reverses(a);
+	reverses(a); 	//reverses array
 
 	for (int i = 0; i <= 16; ++i)
 	{
-		// output each array element's value
-		printf("Element[%d] = %d\n", i, a[i] );
+		printf("Element[%d] = %d\n", i, a[i] ); // output each array element's value
 
 	}
 
@@ -48,9 +45,4 @@ int main() {
 
 
 	}
-
-
-
-
-//int = 4 bytes;
 
