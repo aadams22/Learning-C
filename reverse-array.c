@@ -28,13 +28,16 @@ int main() {
 
 	for (int j = 0; j < 12/2; j++ ) 
 	{
+		//n[j]: 0, 1, 2, 3, 4, 5
 		int other = 12 - j - 1;
-
+		//other: 11, 10, 9, 8, 7, 6
 		int temp = n[j];
-		printf("%d\n", n[j]);
+		//temp: 0, 1, 2, 3, 4, 5
 		n[j] = n[other];
-		// n[other] = temp;
-		
+		//n[other] 11, 10, 9, 8, 7, 6
+		n[other] = temp;
+		//n[other] 0, 1, 2, 3, 4, 5
+		printf("%d\n", n[other]);
 	}
 
 
@@ -42,11 +45,7 @@ int main() {
 	}
 
 
-//other:
-// 11, 10, 9, 8, 7, 6
-//temp:
-// 0, 1, 2, 3, 4, 5
-//n[j]:
-// 0, 1, 2, 3, 4, 5
-//n[other]
-// 0, 1, 2, 2, 1, 0
+
+
+
+
