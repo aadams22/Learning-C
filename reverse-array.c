@@ -2,41 +2,47 @@
 
 //reversal function felclaration 
 void reverses();
-int n[16];
-int i, j;
+int a[16];
+int i, j, k;
 
 
 int main() {
 
-	reverses(n);
+	// writes array
+	for (int i = 0; i <= 16; ++i)
+	{
+		a[i] = i;
+		// output each array element's value
+		printf("Element[%d] = %d\n", i, a[i] );
+
+	}
+
+	// int k = sizeof(a);
+	// printf("%d\n", k);
+
+	reverses(a);
+
+	for (int i = 0; i <= 16; ++i)
+	{
+		// output each array element's value
+		printf("Element[%d] = %d\n", i, a[i] );
+
+	}
 
 	return 0;
 
 }
 
 	// function definition 
-	void reverses(int n[12]) {
-
-	// writes array
-	for (int i = 0; i <= 12; ++i)
-	{
-		n[i] = i;
-		// output each array element's value
-		printf("Element[%d] = %d\n", i, n[i] );
-	}
+	void reverses(int a[16]) {
 
 
 	for (int j = 0; j < 16/2; j++ ) 
 	{
-
-		int other = 16 - j - 1;
-
-		int temp = n[j];
-
-		n[j] = n[other];
-
-		n[other] = temp;
-
+		int other = 16 - j;
+		int temp = a[j];
+		a[j] = a[other];
+		a[other] = temp;
 	}
 
 
@@ -46,5 +52,5 @@ int main() {
 
 
 
-
+//int = 4 bytes;
 
