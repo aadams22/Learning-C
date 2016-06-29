@@ -1,27 +1,36 @@
 #include <stdio.h>
-#define ARR_LENGTH_K 16
+
+//variable definitions
+#define ARR_LENGTH_K 32
 
 //function declaration 
-void reverses(int a[], size_t len);
+void reverse(int a[], size_t len);
 
 
-
-int main() {
+// argc = argument count
+// argv = argument vector
+int main(int argc, char** argv) {
 	int a[ARR_LENGTH_K];
+	unsigned int i;
 
-	int i;
-	for (int i = 0; i <= 16; ++i) 	// writes array
+
+	for(i = 0; i < argc; i++) {
+	    printf("arg %d is %s\n", i, argv[i]);
+	}
+	
+
+	for (i = 0; i <= ARR_LENGTH_K; ++i) 	// writes array
 	{
 		a[i] = i;
-		printf("Element[%d] = %d\n", i, a[i] ); // output each array element's value
+		// printf("Element[%d] = %d\n", i, a[i] ); // output each array element's value
 	}
 
-	int k = sizeof(a, ARR_LENGTH_K);
+	int k = sizeof(a);
 	printf("%d\n", k);
 
-	reverses(a, ARR_LENGTH_K); 	//reverses array
+	reverse(a, ARR_LENGTH_K); 	//reverses array
 
-	for (int i = 0; i <= 16; ++i)
+	for (i = 0; i <= ARR_LENGTH_K; ++i)
 	{
 		printf("Element[%d] = %d\n", i, a[i] ); // output each array element's value
 
@@ -32,13 +41,12 @@ int main() {
 	}
 
 
-	// function definition 
-void reverses(int a[], size_t len) {
+// function definition 
+void reverse(int a[], size_t len) {
 
-
-	for (int i = 0; i < ARR_LENGTH_K/2; i++ ) 
+	for (int i = 0; i < len/2; i++ ) 
 	{
-		int other = ARR_LENGTH_K - i;
+		int other = len - i;
 		int temp = a[i];
 		a[i] = a[other];
 		a[other] = temp;
