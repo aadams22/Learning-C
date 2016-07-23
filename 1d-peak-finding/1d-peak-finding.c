@@ -21,19 +21,27 @@ int main(int argc, char** argv) {
 	{
 		a[i] = rand();
 		// printf("Element[%d] = %d\n", i, a[i] ); // output each array element's value
-
 	}
 
-	peak1D(a, length_k)
+	peak1D(a, length_k);
 
 }
 
 
 //function definition
 void peak1D(int a[], size_t len) {
-	for (int i = 0; i < len; ++i)
+	printf("length is %zu\n", len);
+
+
+	for (unsigned int i = 1; i < len; ++i)
 	{
+
+		if(a[i] > a[i - 1] && a[i] > a[i + 1]) {
+			printf("%u is a peak\n", a[i]);
+		}
+
 		printf("Element[%d] = %d\n", i, a[i] ); // output each array element's value
+	
 	}
 	
 }
