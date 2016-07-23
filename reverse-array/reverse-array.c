@@ -23,8 +23,6 @@ int main(int argc, char** argv) {
 	int a[length_k];
 	
 
-
-
 	for (unsigned int i = 0; i <= length_k; ++i) 	// writes array
 	{
 		a[i] = i;
@@ -57,7 +55,6 @@ void reverse(int a[], size_t len) {
 		a[i] = a[other];
 		a[other] = temp;
 	}
-
 
 
 }
