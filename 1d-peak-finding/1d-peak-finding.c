@@ -38,12 +38,10 @@ void bruteForce(int a[], size_t len) {
 
 	for (unsigned int i = 1; i < len; ++i)
 	{
-
 		if(a[i] > a[i - 1] && a[i] > a[i + 1]) {
 			printf("%u is a peak\n", a[i]);
 		}
-
-		printf("Element[%d] = %d\n", i, a[i] ); // output each array element's value
+			printf("Element[%d] = %d\n", i, a[i] ); // output each array element's value
 	
 	}
 	
@@ -57,9 +55,11 @@ void divideAndConquor(int a[], int n) {
 		printf("%u is a peak\n", a[n]);
 	}else if(a[n - 1] > a[n])
 	{
+		//checks left side
 		n = n - 1;
 		divideAndConquor(a, n);
 	}else {
+		//checks right side
 		n = n + 1;
 		divideAndConquor(a, n);
 	}
