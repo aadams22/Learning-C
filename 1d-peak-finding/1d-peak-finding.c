@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
 
 	for (int i = 0; i < length_k; ++i)
 	{
-		a[i] = rand();
+		a[i] = rand() % 100 + 1;
 		// printf("Element[%d] = %d\n", i, a[i] ); // output each array element's value
 	}
 
